@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.taille-1 {
+  width: 25%;
+}
+
+.taille-2 {
+  width: 50%;
+}
+
+.taille-3 {
+  width: 75%;
+}
+
+.taille-4 {
+  width: 100%;
+}
+
+.taille-petite {
+  width: 25%;
+}
+
+.taille-standard {
+  width: 50%;
+}
+
+.taille-moyenne {
+  width: 75%;
+}
+
+.taille-grande {
+  width: 100%;
+}
+
+.ville-espagne::before {
+  display: block;
+  content: "Espagne";
+}
+
+.ville-maroc::before {
+  display: block;
+  content: "Maroc";
+}
+
+.ville-bresil::before {
+  display: block;
+  content: "Brésil";
+}
+
+.ville-caraibes::before {
+  display: block;
+  content: "Les îles caraibes";
+}
+
+.fa-facebook {
+  background-color: white;
+  color: #4267B2;
+  width: 48px;
+}
+
+.fa-twitter {
+  background-color: white;
+  color: #1DA1F2;
+  width: 48px;
+}
+
+.fa-linkedin {
+  background-color: white;
+  color: #006699;
+  width: 48px;
+}
+
+.fa-instagram {
+  background-color: white;
+  color: #455DC7;
+  width: 48px;
+}
+
+.fa-pinterest {
+  background-color: white;
+  color: #CD1F28;
+  width: 48px;
+}
+
+.fa-youtube {
+  background-color: white;
+  color: #FF0000;
+  width: 48px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 48px !important;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=main.css.map */
