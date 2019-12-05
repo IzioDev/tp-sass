@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Roboto:500&display=swap');
+
+$primary: #009688;
+
+$theme-colors: (
+  "primary": #009688,
+  "secondary": #1976d2
+);
+
+.nav-link {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  color: white !important;
+  background-color: $primary;
+  &:hover {
+    color: $primary !important;
+    background-color: white;
+  }
+  a {
+    color: white;
+  }
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+}
+
+.nav-items-container span:hover {
+  color: #00675b;
+  background-color: white;
+  cursor: pointer;
+}
+
+.wrapper {
+  min-height: calc(100% - 64px);
+  position: relative;
+  margin-top: 64px;
+}
+
+.login-dropdown-container {
+  background-color: white;
+}
+
+#navbarNav {
+  background-color: $primary;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

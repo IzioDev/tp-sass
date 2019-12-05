@@ -1,0 +1,60 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agence voyage - Audio</title>
+    <meta name="author" content="Agence Voyage" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta
+      name="description"
+      content="Agence de voyage. France Allemagne, France Espagne. Des avions sûrs."
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <a class="navbar-brand" href="index.html">Agence Voyage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-items-container">
+
+          </ul>
+        </div>
+      </nav>
+      <section class="container pt-4">
+        <h2>Son1</h2>
+        <audio controls autoplay>
+          <source src="boom.mp3" type="audio/mpeg" />
+        </audio>
+
+        <h2>Son2/3/4</h2>
+        <audio controls>
+          <source src="boom.mp3" type="audio/mpeg" />
+          <source src="boom.mp3" type="audio/mpeg" />
+          <source src="boom.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+      <footer>
+        <div class="left-content">
+          <p>A propos</p>
+        </div>
+        <div class="right-content">
+          <p>Contact</p>
+        </div>
+        <div class="bottom-center">
+          Agence voyage - 15 rue du mandarin - Grenoble - 38000
+        </div>
+      </footer>
+    </div>
+    <!-- Vendors -->
+    <script src="assets/jquery.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+
+    <script src="components/models/MenuItem.js"></script>
+    <script src="components/generate-menu-items.js"></script>
+  </body>
+</html>
