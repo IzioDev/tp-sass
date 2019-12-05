@@ -99,6 +99,9 @@ const handleButtonEditClickEvent = function(event) {
 
   // Change the submit button to edit
   $("#submitDestination").text("Modifier");
+
+  // Scroll to the input
+  countryField.focus();
 };
 
 const onEditSubmit = () => {
