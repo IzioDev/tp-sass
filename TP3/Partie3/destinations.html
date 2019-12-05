@@ -1,0 +1,112 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agence voyage - Destinations</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="author" content="Agence Voyage" />
+    <meta
+      name="description"
+      content="Agence de voyage. France Allemagne, France Espagne. Des avions sûrs."
+    />
+    <script src="assets/jquery.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav>
+        <h1 class="brand"><a href="index.html">Agence Voyage</a></h1>
+
+        <div class="nav-items-container"></div>
+      </nav>
+      <section class="container table">
+        <h2 class="content-title">Destinations</h2>
+        <table>
+          <thead>
+            <th>
+              Pays
+            </th>
+            <th>
+              Circuit
+            </th>
+            <th>
+              Prix
+            </th>
+            <th>
+              Réservation
+            </th>
+          </thead>
+          <tbody id="table-data-container"></tbody>
+        </table>
+      </section>
+
+      <div class="separator"></div>
+
+      <section class="container" id="creation-container">
+        <h2 class="content-title">Ajouter un pays</h2>
+        <form id="creation-form">
+          <div class="form-field">
+            <label for="country">Pays : </label>
+            <input
+              type="text"
+              name="country"
+              placeholder="Paris"
+              id="field-country"
+            />
+          </div>
+          <div class="form-field">
+            <label for="circuitDescription">Description du circuit : </label>
+            <input
+              type="text"
+              name="circuitDescription"
+              placeholder="Paris"
+              id="field-circuitDescription"
+            />
+          </div>
+          <div class="form-field">
+            <label for="price">Prix : </label>
+            <input
+              type="number"
+              name="price"
+              placeholder="Paris"
+              id="field-price"
+            />
+          </div>
+          <div class="form-field">
+            <label for="imageURI">Image URI : </label>
+            <input
+              type="text"
+              name="imageURI"
+              placeholder="Paris"
+              id="field-imageURI"
+            />
+          </div>
+          <button class="submit" type="submit">Ajouter</button>
+        </form>
+      </section>
+      <footer>
+        <div class="left-content">
+          <p>A propos</p>
+        </div>
+        <div class="right-content">
+          <p>Contact</p>
+        </div>
+        <div class="bottom-center">
+          Agence voyage - 15 rue du mandarin - Grenoble - 38000
+        </div>
+      </footer>
+    </div>
+    <script src="components/models/MenuItem.js"></script>
+    <script src="components/generate-menu-items.js"></script>
+    <script src="components/models/Destination.js"></script>
+    <script src="components/destinations-crud.js"></script>
+    <script src="components/generate-destinations.js"></script>
+  </body>
+</html>

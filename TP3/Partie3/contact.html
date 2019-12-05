@@ -1,0 +1,57 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agence Voyage - Contact</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/jquery.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav>
+        <h1 class="brand"><a href="index.html">Agence Voyage</a></h1>
+
+        <div class="nav-items-container"></div>
+      </nav>
+      <section class="container">
+        <form>
+          <label>Nom et prénom:</label>
+          <input type="text" name="name" required />
+
+          <label>Email:</label>
+          <input type="email" name="email" />
+
+          <label>Téléphone:</label>
+          <input type="tel" name="tel" />
+
+          <label>Message:</label>
+          <input type="text" required />
+
+          <button type="submit">Envoyer</button>
+          <button type="reset">Vider</button>
+        </form>
+      </section>
+      <footer>
+        <div class="left-content">
+          <p>A propos</p>
+        </div>
+        <div class="right-content">
+          <p>Contact</p>
+        </div>
+        <div class="bottom-center">
+          Agence voyage - 15 rue du mandarin - Grenoble - 38000
+        </div>
+      </footer>
+    </div>
+    <script src="components/models/MenuItem.js"></script>
+    <script src="components/generate-menu-items.js"></script>
+  </body>
+</html>
