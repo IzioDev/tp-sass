@@ -197,6 +197,11 @@ tr td:nth-child(4) button {
   border-color: rgba(0, 0, 0, 0.12);
   background-color: white;
 }
+
+tr td:nth-child(4) button {
+  margin-bottom: 4px;
+}
+
 tr td:nth-child(4) button:hover {
   color: white;
   background-color: #1976d2;
@@ -208,6 +213,14 @@ tr td:nth-child(4) button.delete {
 tr td:nth-child(4) button.delete:hover {
   color: white;
   background-color: #d23519;
+}
+
+tr td:nth-child(4) button.edit {
+  color: #d28e02;
+}
+tr td:nth-child(4) button.edit:hover {
+  color: white;
+  background-color: #d28e02;
 }
 
 td {

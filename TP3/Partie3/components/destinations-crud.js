@@ -1,6 +1,7 @@
+let isCreationMode = true;
+let selectedIndex = null;
+
 $(() => {
-  let isCreationMode = true;
-  let selectedIndex = null;
   $("#creation-form").submit(event => {
     event.preventDefault();
 
@@ -38,24 +39,24 @@ $(() => {
 const processAction = (
   isCreationMode,
   selectedIndex,
-  countryValue,
-  circuitDescriptionValue,
-  priceValue,
-  imageURIValue
+  country,
+  circuitDescription,
+  price,
+  imageURI
 ) =>
-  isCreationMode
+  !isCreationMode
     ? editDestination({
         selectedIndex,
-        countryValue,
-        circuitDescriptionValue,
-        priceValue,
-        imageURIValue
+        country,
+        circuitDescription,
+        price,
+        imageURI
       })
     : addDestination({
-        country: countryValue,
-        circuitDescription: circuitDescriptionValue,
-        price: priceValue,
-        imageURI: imageURIValue
+        country,
+        circuitDescription,
+        price,
+        imageURI
       });
 
 const onAddOrRemoveDestination = () => {
@@ -77,7 +78,44 @@ const handleButtonDeleteClickEvent = function(event) {
 const handleButtonEditClickEvent = function(event) {
   const _thisElement = $(this);
   const index = _thisElement.attr("index");
-  removeDestination(index);
+
+  // Update state variables
+  isCreationMode = false;
+  selectedIndex = index;
+
+  // Retrieve destination value based on index
+  const destination = getDestinationFromIndex(index);
+
+  // Fill form with current values
+  const countryField = $("#field-country");
+  const descriptionField = $("#field-circuitDescription");
+  const priceField = $("#field-price");
+  const imageURIField = $("#field-imageURI");
+
+  countryField.val(destination.country);
+  descriptionField.val(destination.circuitDescription);
+  priceField.val(destination.price);
+  imageURIField.val(destination.imageURI);
+
+  // Change the submit button to edit
+  $("#submitDestination").text("Modifier");
+};
+
+const onEditSubmit = () => {
+  // Change the submit button to edit
+  $("#submitDestination").text("Ajouter");
+  isCreationMode = true;
+
+  // Reset from value
+  const countryField = $("#field-country");
+  const descriptionField = $("#field-circuitDescription");
+  const priceField = $("#field-price");
+  const imageURIField = $("#field-imageURI");
+
+  countryField.val("");
+  descriptionField.val("");
+  priceField.val("");
+  imageURIField.val("");
 };
 
 const areFormValuesNotEmpty = (...vals) =>

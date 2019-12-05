@@ -1,33 +1,3 @@
-const destinationsData = [
-  {
-    country: "Londres",
-    circuitDescription:
-      "Visite du big ben, place marchande, repas jour et nuit compris",
-    price: 440,
-    imageURI: "londres.webp"
-  },
-  {
-    country: "Istanbul",
-    circuitDescription:
-      "Visite de la mosquée, place marchande, repas jour et nuit compris",
-    price: 540,
-    imageURI: "istanbul.jpg"
-  },
-  {
-    country: "Russie",
-    circuitDescription:
-      "Visite de Varsovie, place marchande, repas jour et nuit compris",
-    price: 880,
-    imageURI: "russie.jpg"
-  },
-  {
-    country: "Croatie",
-    circuitDescription: "Plage, place marchande, repas jour et nuit compris",
-    price: 440,
-    imageURI: "croatie.webp"
-  }
-];
-
 $(() => {
   generateDestinations();
 });
@@ -79,10 +49,26 @@ const removeDestination = index => {
 
 const editDestination = ({
   selectedIndex,
-  countryValue,
-  circuitDescriptionValue,
-  priceValue,
-  imageURIValue
+  country,
+  circuitDescription,
+  price,
+  imageURI
 }) => {
-  console.log("test");
+  // Change the submit button to add
+  $("#submitDestination").text("Ajouter");
+
+  updateDestination(selectedIndex, {
+    country,
+    circuitDescription,
+    price,
+    imageURI
+  });
+
+  const tableDataContainer = $("#table-data-container");
+  tableDataContainer.html("");
+
+  generateDestinations();
+  onAddOrRemoveDestination();
+
+  onEditSubmit();
 };

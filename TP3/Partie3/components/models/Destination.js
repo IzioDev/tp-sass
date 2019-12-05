@@ -22,6 +22,7 @@ class Destination {
             </td>
             <td>
                 <button>Réserver</button>
+                <button class="edit" index="${this.index}">Modifier</button>
                 <button class="delete" index="${this.index}">Supprimer</button>
             </td>
         </tr>

@@ -20,7 +20,6 @@
 
 // @include generateTaille(3, 33%);
 
-
 // Question 3:
 
 $tailles: ("petite", "standard", "moyenne", "grande");
@@ -70,7 +69,12 @@ $tailles: ("petite", "standard", "moyenne", "grande");
 
 // Question 8:
 
-$destinations: ("espagne": "Espagne", "maroc": "Maroc", "bresil": "Brésil", "caraibes": "Les îles caraibes");
+$destinations: (
+  "espagne": "Espagne",
+  "maroc": "Maroc",
+  "bresil": "Brésil",
+  "caraibes": "Les îles caraibes"
+);
 
 // Question 9:
 
@@ -104,12 +108,30 @@ $destinations: ("espagne": "Espagne", "maroc": "Maroc", "bresil": "Brésil", "ca
 // Question 11:
 
 $socials: (
-        "facebook": ("color": #4267B2, "background-color": #4267B2),
-        "twitter": ("color": #1DA1F2, "background-color": #1DA1F2),
-        "linkedin": ("color": #006699, "background-color": #006699),
-        "instagram": ("color": #455DC7, "background-color": #455DC7),
-        "pinterest": ("color": #CD1F28, "background-color": #CD1F28),
-        "youtube": ("color": #FF0000, "background-color": #FF0000)
+  "facebook": (
+    "color": #4267b2,
+    "background-color": #4267b2
+  ),
+  "twitter": (
+    "color": #1da1f2,
+    "background-color": #1da1f2
+  ),
+  "linkedin": (
+    "color": #006699,
+    "background-color": #006699
+  ),
+  "instagram": (
+    "color": #455dc7,
+    "background-color": #455dc7
+  ),
+  "pinterest": (
+    "color": #cd1f28,
+    "background-color": #cd1f28
+  ),
+  "youtube": (
+    "color": #ff0000,
+    "background-color": #ff0000
+  )
 );
 
 // Question 12:
@@ -134,12 +156,11 @@ $socials: (
   }
 }
 
-
 // Question 13:
 
 @mixin generateSocialStyle($opacity) {
   @each $socialName, $mapColor in $socials {
-    $transparencyColor:rgba(map.get($mapColor, "background-color"), $opacity);
+    $transparencyColor: rgba(map.get($mapColor, "background-color"), $opacity);
 
     .fa-#{$socialName} {
       background-color: $transparencyColor;
@@ -155,7 +176,7 @@ $socials: (
 
 @mixin generateSocialStyleLighterDarker($opacity, $lightValue, $darkValue) {
   @each $socialName, $mapColor in $socials {
-    $transparencyColor:rgba(map.get($mapColor, "background-color"), $opacity);
+    $transparencyColor: rgba(map.get($mapColor, "background-color"), $opacity);
     $lighterColor: lighten($transparencyColor, $lightValue);
     $darkerColor: darken($lighterColor, $darkValue);
 
@@ -168,5 +189,3 @@ $socials: (
 }
 
 // @include generateSocialStyleLighterDarker(0.5, 0%, 30%);
-
-
