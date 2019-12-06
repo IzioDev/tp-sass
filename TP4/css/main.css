@@ -39,6 +39,10 @@
   background-color: #009688;
 }
 
+.form-field {
+  padding-bottom: 12px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -9914,6 +9918,23 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+#error-message {
+  color: #dc3545;
+  font-size: 24px;
+  text-align: center;
+}
+
+#login-modal-action {
+  display: none;
+}
+
+.admin-action {
+  display: none;
+}
+
+.user-action {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

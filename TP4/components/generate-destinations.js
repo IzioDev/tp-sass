@@ -1,5 +1,17 @@
 $(() => {
   generateDestinations();
+
+  const storedUser = localStorage.getItem("user");
+
+  if (storedUser) {
+    if (storedUser === "admin") {
+      $(".admin-action").show();
+    }
+
+    if (storedUser === "user" || storedUser === "admin") {
+      $(".user-action").show();
+    }
+  }
 });
 
 const generateDestinations = () => {
@@ -9,10 +21,10 @@ const generateDestinations = () => {
     }
   );
 
-  const tableDataContainer = $("#table-data-container");
+  const divDataContainer = $("#destinations-container");
 
   destinations.forEach(destination => {
-    tableDataContainer.append(destination.getTableRow());
+    divDataContainer.append(destination.getTableRow());
   });
 
   onAddOrRemoveDestination();
@@ -33,16 +45,16 @@ const addDestination = ({ country, circuitDescription, price, imageURI }) => {
     imageURI,
     destinationsData.length - 1
   );
-  const tableDataContainer = $("#table-data-container");
-  tableDataContainer.append(addedDestination.getTableRow());
+  const divDataContainer = $("#destinations-container");
+  divDataContainer.append(addedDestination.getTableRow());
   onAddOrRemoveDestination();
 };
 
 const removeDestination = index => {
   destinationsData.splice(index, 1);
 
-  const tableDataContainer = $("#table-data-container");
-  tableDataContainer.html("");
+  const divDataContainer = $("#destinations-container");
+  divDataContainer.html("");
 
   generateDestinations();
 };

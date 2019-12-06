@@ -46,4 +46,26 @@ $theme-colors: (
   background-color: $primary;
 }
 
+.form-field {
+  padding-bottom: 12px;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+#error-message {
+  color: $danger;
+  font-size: 24px;
+  text-align: center;
+}
+
+#login-modal-action {
+  display: none;
+}
+
+.admin-action {
+  display: none;
+}
+
+.user-action {
+  display: none;
+}

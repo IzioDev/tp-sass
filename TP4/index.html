@@ -13,31 +13,83 @@
 
   <body>
     <div class="wrapper">
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="loginModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModal">Connexion</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Fermer"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-field">
+                <label for="username">Nom d'utilisateur</label>
+                <input
+                  placeholder="admin"
+                  name="username"
+                  type="text"
+                  id="login-username-input"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="password">Mot de passe</label>
+                <input
+                  name="password"
+                  id="login-password-input"
+                  type="password"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <p id="error-message"></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Fermer
+              </button>
+              <button type="button" id="login-button" class="btn btn-primary">
+                Me connecter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <nav class="navbar navbar-expand-lg fixed-top navbar-light">
         <h1 class="brand">
-          <span class="menu-link"
-            >Agence Voyage
-            <div class="login-dropdown">
-              <section class="login-dropdown-container">
-                <h1 class="login-h1">Se connecter</h1>
-                <div class="form-field">
-                  <label for="email">Email</label>
-                  <input
-                    placeholder="contact@izio.fr"
-                    name="email"
-                    type="email"
-                    required
-                  />
-                </div>
-                <div class="form-field">
-                  <label for="password">Mot de passe</label>
-                  <input name="password" type="password" required />
-                </div>
-
-                <button style="width: 80%" class="blue-btn">Connexion</button>
-              </section>
-            </div></span
+          <span class="menu-link">
+            Agence Voyage
+          </span>
+          <button
+            type="button"
+            class="ml-2 btn btn-primary"
+            data-toggle="modal"
+            data-target="#loginModal"
+            id="login-modal-action"
           >
+            Me connecter
+          </button>
         </h1>
         <button
           class="navbar-toggler"
@@ -55,39 +107,46 @@
         </div>
       </nav>
 
-      <section class="container pt-4">
-        <h2 class="content-title">Description générale</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor
-          lorem, vestibulum ut pulvinar ut, bibendum nec turpis. Vivamus sed
-          ipsum ullamcorper mi dictum congue eu sit amet nunc. Maecenas gravida
-          nulla sit amet dolor lobortis, at egestas risus sollicitudin. Ut
-          fermentum enim id rhoncus fringilla. Ut et turpis lacus. Duis
-          porttitor felis dolor, vitae porta metus vestibulum ut. Ut nec tempus
-          mauris. Maecenas quis consectetur neque. Vivamus tincidunt varius
-          risus. Praesent vitae mi id nisl sagittis hendrerit quis in nisl.
-          Quisque ultricies vitae ipsum et euismod. Sed ultricies nec mauris
-          vitae sodales. Aliquam id ultrices nibh, a laoreet sapien. Etiam
-          venenatis, metus non rutrum porta, leo nunc malesuada neque, eu
-          sodales tortor sapien nec elit. Etiam et velit sed diam sagittis
-          convallis. Maecenas porta leo elit, at sollicitudin ex faucibus in.
-          Quisque odio nisi, placerat sit amet ultrices eu, rhoncus id velit.
-          Suspendisse nibh risus, laoreet tristique neque vitae, congue congue
-          metus. Vestibulum fermentum turpis eu egestas congue.
-        </p>
-      </section>
+      <div class="container">
+        <div class="col-lg-12">
+          <section class="pt-4">
+            <h2 class="content-title">Description générale</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor
+              lorem, vestibulum ut pulvinar ut, bibendum nec turpis. Vivamus sed
+              ipsum ullamcorper mi dictum congue eu sit amet nunc. Maecenas
+              gravida nulla sit amet dolor lobortis, at egestas risus
+              sollicitudin. Ut fermentum enim id rhoncus fringilla. Ut et turpis
+              lacus. Duis porttitor felis dolor, vitae porta metus vestibulum
+              ut. Ut nec tempus mauris. Maecenas quis consectetur neque. Vivamus
+              tincidunt varius risus. Praesent vitae mi id nisl sagittis
+              hendrerit quis in nisl. Quisque ultricies vitae ipsum et euismod.
+              Sed ultricies nec mauris vitae sodales. Aliquam id ultrices nibh,
+              a laoreet sapien. Etiam venenatis, metus non rutrum porta, leo
+              nunc malesuada neque, eu sodales tortor sapien nec elit. Etiam et
+              velit sed diam sagittis convallis. Maecenas porta leo elit, at
+              sollicitudin ex faucibus in. Quisque odio nisi, placerat sit amet
+              ultrices eu, rhoncus id velit. Suspendisse nibh risus, laoreet
+              tristique neque vitae, congue congue metus. Vestibulum fermentum
+              turpis eu egestas congue.
+            </p>
+          </section>
+        </div>
 
-      <div class="separator"></div>
+        <div class="separator"></div>
 
-      <section class="container">
-        <h2 class="content-title">Infos pratiques</h2>
-        <p>Voici la liste des toutes mes infos pratiques</p>
-        <ul>
-          <li>Vivamus libero tellus, sagittis quis nisl id</li>
-          <li>pellentesque diam. Mauris feugiat sed</li>
-          <li>Nunc odio ex, fringilla eleifend sem vel</li>
-        </ul>
-      </section>
+        <div class="col-lg-12">
+          <section>
+            <h2 class="content-title">Infos pratiques</h2>
+            <p>Voici la liste des toutes mes infos pratiques</p>
+            <ul>
+              <li>Vivamus libero tellus, sagittis quis nisl id</li>
+              <li>pellentesque diam. Mauris feugiat sed</li>
+              <li>Nunc odio ex, fringilla eleifend sem vel</li>
+            </ul>
+          </section>
+        </div>
+      </div>
       <footer>
         <div class="left-content">
           <p>A propos</p>
@@ -107,5 +166,58 @@
 
     <script src="components/models/MenuItem.js"></script>
     <script src="components/generate-menu-items.js"></script>
+
+    <script>
+
+      const handleLogin = (event) => {
+        const username = $("#login-username-input").val();
+        const password = $("#login-password-input").val();
+
+        $.ajax({
+          url: "http://localhost:81/connection/index.php",
+          data: {login: username, password},
+          method: "POST",
+          error: console.error,
+          success: (response) => {
+
+            if (response.indexOf("Failed") !== -1) {
+              // Login failed
+              setErrorMessage("Nom d'utilisateur ou mot de passe incorrect.")
+            } else {
+              // Login succeeded
+              $('#loginModal').modal('hide');
+              $("#login-modal-action").hide();
+              localStorage.setItem("user", username);
+            }
+          },
+
+        })
+      };
+
+      const setErrorMessage = (message) => {
+        $("#error-message").text(message);
+      };
+
+      const clearMessage = () => {
+        $("#error-message").text("");
+      };
+
+      $(() => {
+
+        const storedUser = localStorage.getItem("user");
+
+        if (storedUser) {
+          $("#login-modal-action").hide();
+        } else {
+          $("#login-modal-action").show();
+        }
+
+        $("#login-button").off().click(handleLogin);
+
+        $('#loginModal').on('shown.bs.modal', function () {
+          clearMessage();
+        })
+      });
+    </script>
   </body>
 </html>

@@ -10,33 +10,47 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg fixed-top navbar-light">
         <a class="navbar-brand" href="index.html">Agence Voyage</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav nav-items-container">
-
-          </ul>
+          <ul class="navbar-nav nav-items-container"></ul>
         </div>
       </nav>
-      <section class="wrapper pt-4">
+      <div class="wrapper container pt-4 pl-5 pr-5">
         <form>
-          <label>Nom et prénom:</label>
-          <input type="text" name="name" required />
+          <div class="form-field">
+            <label>Nom et prénom:</label>
+            <input type="text" name="name" required />
+          </div>
 
-          <label>Email:</label>
-          <input type="email" name="email" />
+          <div class="form-field">
+            <label>Email:</label>
+            <input type="email" name="email" />
+          </div>
 
-          <label>Téléphone:</label>
-          <input type="tel" name="tel" />
+          <div class="form-field">
+            <label>Téléphone:</label>
+            <input type="tel" name="tel" />
+          </div>
 
-          <label>Message:</label>
-          <input type="text" required />
+          <div class="form-field">
+            <label>Message:</label>
+            <input type="text" required />
+          </div>
 
-          <button type="submit">Envoyer</button>
-          <button type="reset">Vider</button>
+          <button class="btn btn-primary" type="submit">Envoyer</button>
+          <button class="btn btn-secondary" type="reset">Vider</button>
         </form>
-      </section>
+      </div>
       <footer>
         <div class="left-content">
           <p>A propos</p>
