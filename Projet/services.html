@@ -1,0 +1,173 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Agence voyage - Services</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <meta name="author" content="Agence Voyage"/>
+    <meta
+            name="description"
+            content="Agence de voyage. France Allemagne, France Espagne. Des avions sûrs."
+    />
+
+    <link href="./css/main.css" rel="stylesheet"/>
+
+    <!-- Leaflet Import -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+</head>
+
+<body>
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <a class="navbar-brand" href="index.html">Agence Voyage</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-items-container"></ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="container pt-4">
+                    <div class="col-lg-12">
+                        <h2 class="content-title">Informations</h2>
+                        <ul>
+                            <li>Grenoble: Agence principal qui gère tous les paiements.</li>
+                            <li>Toulouse: Agence pour les départs en Afrique.</li>
+                            <li>Rennes: Agence pour les départ en Asie et en Europe.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12">
+                        <h2 class="content-title" id="map-title">Localisation</h2>
+                        <!-- Leaflet map div -->
+                        <div id="map"></div>
+                    </div>
+                    <div class="col-lg-12">
+                        <h2 class="content-title">Assistance</h2>
+                        <ul>
+                            <li>Grenoble: Responsable - Quentin Someveille - 06.78.52.68.48</li>
+                            <li>Toulouse: Responsable - Adil Sajid - 07.23.48.47.15</li>
+                            <li>Rennes: Responsable - Tom Groholidon - 06.33.25.71.96</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="left-content">
+            <p>A propos</p>
+        </div>
+        <div class="right-content">
+            <p>Contact</p>
+        </div>
+        <div class="bottom-center">
+            Agence voyage - 15 rue du mandarin - Grenoble - 38000
+        </div>
+    </footer>
+</div>
+<!-- Vendors -->
+<script src="assets/jquery.js"></script>
+<script src="assets/bootstrap.bundle.min.js"></script>
+<script src="assets/bootstrap.min.js"></script>
+
+<script src="components/models/MenuItem.js"></script>
+<script src="components/generate-menu-items.js"></script>
+
+<!-- Leaflet js logics -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+<script>
+    $(() => {
+        /* Scroll to the map */
+        $('html, body').animate({
+            scrollTop: $("#map-title").offset().top
+        }, 1000);
+
+        /* Green Leaflet icon */
+        const greenIcon = new L.Icon({
+            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        /* Default Lng/Lat view */
+        const map = L.map('map').setView([45.18398, 5.72266], 20);
+
+        /* Use map with OpenMap */
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            accessToken: 'pk.eyJ1IjoiaXppbzM4IiwiYSI6ImNrNGJmM25mbjBkNDIzcnA4NHVnYzR4aXgifQ.GIcRJjaFaNXUoZaHI7HKUA'
+        }).addTo(map);
+
+        /* Create 3 markers */
+        const grenobleLatLong = [45.18398, 5.72266];
+        const grenobleMarker = L.marker(grenobleLatLong, {icon: greenIcon, title: "Grenoble"}).addTo(map);
+        const toulouseMarker = L.marker([43.55573, 1.414996], {icon: greenIcon, title: "Toulouse"}).addTo(map);
+        const rennesMarker = L.marker([48.101, -1.66707], {icon: greenIcon, title: "Rennes"}).addTo(map);
+
+        /* Add popup to these markers */
+        grenobleMarker.bindPopup("<b>Agence tout risque de Grenoble</b>").openPopup();
+        toulouseMarker.bindPopup("<b>Agence tout risque de Toulouse</b>").openPopup();
+        rennesMarker.bindPopup("<b>Agence tout risque de Rennes</b>").openPopup();
+
+        const radius = 0.0005;
+        /* Util wait function */
+        const delay = async (ms) => {
+            return new Promise((res, rej) => {
+                setTimeout(res, ms);
+            })
+        };
+
+        /* Instantiate one animation */
+        const startOneAnimation = () => {
+            return new Promise(async (res, rej) => {
+                const animationMarker = L.marker(grenobleLatLong, {title: "Annimation"}).addTo(map);
+
+                /* For each deg */
+                for (let i = 0; i < 360; i++) {
+                    /* Convert to rad */
+                    const degRad = i / 180 * Math.PI;
+                    /* Apply some basic maths */
+                    const newLatLong = [
+                        45.18398 + (radius / 2) * Math.cos(degRad),
+                        5.72266 - (radius / 2) * Math.sin(degRad)
+                    ];
+
+                    animationMarker.setLatLng(newLatLong).update();
+                    await delay(5);
+                }
+
+                animationMarker.removeFrom(map);
+            });
+        };
+
+        /* On Click, process animation 50 times */
+        grenobleMarker.on("click", async (event) => {
+            for (i = 0; i < 50; i++) {
+                startOneAnimation();
+                await delay(50);
+            }
+        })
+    });
+</script>
+</body>
+</html>

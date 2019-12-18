@@ -1,0 +1,357 @@
+html,
+body {
+  margin: 0;
+}
+
+p,
+li {
+  font-family: 'Roboto', sans-serif;
+}
+
+section:last-of-type {
+  padding-bottom: 100px;
+}
+
+.separator {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 60%;
+  height: 2px;
+  background-color: #009688;
+}
+
+.content-title {
+  color: #1976d2;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+}
+
+.brand-container {
+  display: inline-block;
+  height: 64px;
+}
+
+.nav-items-container {
+  max-width: 80%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+  vertical-align: inherit;
+}
+.brand {
+  padding: 12px;
+  margin: 0;
+  display: inline-block;
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.brand:hover {
+  text-decoration: none !important;
+  color: white;
+  cursor: pointer;
+}
+.brand a {
+  line-height: 32px;
+  color: white !important;
+  text-decoration: none !important;
+  font-family: "Exo 2", sans-serif;
+  display: inline-block;
+}
+nav {
+  background-color: #009688;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 32px;
+  height: 64px;
+}
+
+footer {
+  background: #009688;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.2),
+    20px 6px 20px 6px rgba(0, 0, 0, 0.19);
+}
+footer .left-content {
+  width: 20%;
+  text-align: right;
+  display: inline-block;
+}
+footer .right-content {
+  width: 60%;
+  text-align: right;
+  display: inline-block;
+}
+footer .bottom-center {
+  width: 100%;
+  text-align: center;
+}
+
+tr td {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+}
+
+tr:nth-child(2n) {
+  background-color: #f1f1f1;
+}
+
+tr td:nth-child(1) img {
+  max-width: 400px;
+}
+
+tr td:nth-child(1) p {
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+tr td:nth-child(2) {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+tr td:nth-child(3) {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+tr td:nth-child(4) {
+  text-align: center;
+
+  margin-bottom: 2px;
+}
+
+.blue-btn {
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  overflow: visible;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1976d2;
+  padding: 0 15px;
+  line-height: 34px;
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: white;
+  margin-top: 64px;
+}
+
+.blue-btn:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+label {
+  font-size: 12px;
+}
+
+tr td:nth-child(4) button {
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  overflow: visible;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1976d2;
+  padding: 0 15px;
+  line-height: 34px;
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+
+tr td:nth-child(4) button {
+  margin-bottom: 4px;
+}
+
+tr td:nth-child(4) button:hover {
+  color: white;
+  background-color: #1976d2;
+  cursor: pointer;
+}
+tr td:nth-child(4) button.delete {
+  color: #d23519;
+}
+tr td:nth-child(4) button.delete:hover {
+  color: white;
+  background-color: #d23519;
+}
+
+tr td:nth-child(4) button.edit {
+  color: #d28e02;
+}
+tr td:nth-child(4) button.edit:hover {
+  color: white;
+  background-color: #d28e02;
+}
+
+td {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.table {
+  padding-top: 32px;
+  padding-bottom: 164px !important;
+}
+
+table {
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgrey;
+  border-collapse: collapse;
+}
+td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #009688;
+}
+
+thead {
+  background-color: #009688;
+  color: white;
+}
+th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+}
+
+.nav-items-container a {
+  color: white;
+  text-decoration: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  line-height: 64px;
+  transition: color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+.nav-items-container span {
+  color: white;
+  text-decoration: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  line-height: 64px;
+  transition: color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+.dropdown-content {
+  display: none;
+  margin-left: -40px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 84px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 6px;
+  color: black;
+}
+
+.dropdown-content ul {
+  padding-inline-start: 0 !important;
+}
+
+.dropdown-content li {
+  list-style-type: none;
+  color: #00675b;
+}
+
+.services-link:hover .dropdown-content {
+  display: block;
+}
+
+.services-link {
+  display: inline-block;
+  position: relative;
+}
+
+.login-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 33%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-field {
+  widows: 80%;
+}
+
+.form-field label {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  min-height: 32px;
+  margin: auto;
+}
+
+.form-field input {
+  width: 100%;
+  height: 32px;
+}
+
+.login-h1 {
+  color: #1976d2;
+}
+
+button.submit {
+  display: block;
+  margin: auto;
+  margin-top: 16px;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  overflow: visible;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #73d820;
+  padding: 0 15px;
+  line-height: 34px;
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+
+button.submit:hover {
+  color: white;
+  background-color: #73d820;
+  cursor: pointer;
+}

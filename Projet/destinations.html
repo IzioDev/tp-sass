@@ -1,0 +1,132 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agence voyage - Destinations</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="author" content="Agence Voyage" />
+    <meta
+      name="description"
+      content="Agence de voyage. France Allemagne, France Espagne. Des avions sûrs."
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <a class="navbar-brand" href="index.html">Agence Voyage</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-items-container"></ul>
+        </div>
+      </nav>
+      <div class="container pt-4 pb-5">
+        <div class="row pb-5" id="destinations-container"></div>
+      </div>
+      <!-- <section class="container table pt-4">
+        <h2 class="content-title">Destinations</h2>
+        <table>
+          <thead>
+            <th>
+              Pays
+            </th>
+            <th>
+              Circuit
+            </th>
+            <th>
+              Prix
+            </th>
+            <th>
+              Réservation
+            </th>
+          </thead>
+          <tbody id="table-data-container"></tbody>
+        </table>
+      </section> -->
+
+      <div class="admin-action">
+        <div class="separator"></div>
+
+        <section class="container" id="creation-container">
+          <h2 class="content-title">Ajouter un pays</h2>
+          <form id="creation-form">
+            <div class="form-field">
+              <label for="country">Pays : </label>
+              <input
+                type="text"
+                name="country"
+                placeholder="Paris"
+                id="field-country"
+              />
+            </div>
+            <div class="form-field">
+              <label for="circuitDescription">Description du circuit : </label>
+              <input
+                type="text"
+                name="circuitDescription"
+                placeholder="Paris"
+                id="field-circuitDescription"
+              />
+            </div>
+            <div class="form-field">
+              <label for="price">Prix : </label>
+              <input
+                type="number"
+                name="price"
+                placeholder="Paris"
+                id="field-price"
+              />
+            </div>
+            <div class="form-field">
+              <label for="imageURI">Image URI : </label>
+              <input
+                type="text"
+                name="imageURI"
+                placeholder="Paris"
+                id="field-imageURI"
+              />
+            </div>
+            <button id="submitDestination" class="submit" type="submit">
+              Ajouter
+            </button>
+          </form>
+        </section>
+      </div>
+
+      <footer>
+        <div class="left-content">
+          <p>A propos</p>
+        </div>
+        <div class="right-content">
+          <p>Contact</p>
+        </div>
+        <div class="bottom-center">
+          Agence voyage - 15 rue du mandarin - Grenoble - 38000
+        </div>
+      </footer>
+    </div>
+
+    <!-- Vendors -->
+    <script src="assets/jquery.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="components/models/MenuItem.js"></script>
+    <script src="components/generate-menu-items.js"></script>
+    <script src="components/destinations.js"></script>
+    <script src="components/models/Destination.js"></script>
+    <script src="components/destinations-crud.js"></script>
+    <script src="components/generate-destinations.js"></script>
+  </body>
+</html>
